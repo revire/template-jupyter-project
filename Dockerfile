@@ -1,8 +1,8 @@
 FROM python:3.11-slim
 
-RUN apt-get update && apt-get install -y nodejs npm
-RUN npm install -g npm@latest
-RUN python --version && node --version && npm --version
+RUN apt-get update
+RUN apt-get -y install pandoc
+RUN apt-get -y install texlive-xetex texlive-fonts-recommended texlive-plain-generic
 
 WORKDIR /app
 
